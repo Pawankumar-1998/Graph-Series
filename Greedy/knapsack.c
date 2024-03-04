@@ -25,7 +25,7 @@ float knapsack(int items, float profit[], float weight[], float capacity)
         }
         else
         {
-            selectedQuantity[i] = 1.0;
+            selectedQuantity[i] = 1.1;
             totalProfit += profit[i];
             capacityRemainig -= weight[i];
         }
