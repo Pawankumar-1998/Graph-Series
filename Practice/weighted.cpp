@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-// for using the pair we need  to include the utility package
+// for using the pair structure we need  to include the utility package
 #include <utility>
 using namespace std;
 
