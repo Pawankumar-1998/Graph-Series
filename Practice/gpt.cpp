@@ -26,7 +26,9 @@ struct Subset
 int find(vector<Subset> &subsets, int i)
 {
     if (subsets[i].parent != i)
+    {
         subsets[i].parent = find(subsets, subsets[i].parent);
+    }
     return subsets[i].parent;
 }
 
@@ -81,16 +83,16 @@ void KruskalMST(vector<Edge> &edges, int V)
 int main()
 {
     int V = 8; // Number of vertices
-    vector<Edge> edges = {
-        {1, 2, 1},
-        {1, 3, 7},
-        {2, 4, 5},
-        {3, 4, 2},
-        {2, 5, 6},
-        {5, 6, 3},
-        {6, 8, 8},
-        {8, 7, 4},
-        {7, 5, 9}};
+    vector<Edge> edges;
+    edges.push_back({1, 2, 1});
+    edges.push_back({1, 3, 7});
+    edges.push_back({2, 4, 5});
+    edges.push_back({3, 4, 2});
+    edges.push_back({2, 5, 6});
+    edges.push_back({5, 6, 3});
+    edges.push_back({6, 8, 8});
+    edges.push_back({8, 7, 4});
+    edges.push_back({7, 5, 9});
 
     // Find and print MST using Kruskal's algorithm
     cout << "Edges of Minimum Spanning Tree using Kruskal's algorithm:" << endl;
