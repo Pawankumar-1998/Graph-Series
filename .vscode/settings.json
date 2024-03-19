@@ -3,6 +3,7 @@
         "*.py": "python",
         "xutility": "cpp",
         "vector": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "xlocale": "cpp"
     }
 }
