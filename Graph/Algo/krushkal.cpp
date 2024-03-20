@@ -9,7 +9,7 @@ struct Edge
     int src, dest, weight;
 };
 
-//  this is the structure of the subset which store the parent of the particular node and their rank
+//  this is the structure of the subset which store the parent of the particular node and their ranks
 struct Subset
 {
     int parent, rank;
