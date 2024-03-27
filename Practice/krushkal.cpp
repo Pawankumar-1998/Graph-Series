@@ -19,8 +19,19 @@ bool compare(const Edge &a, const Edge &b)
     return a.weight < b.weight;
 }
 
+//  function for finding the parent node of the given node
+int find(vector<Subset> &subset, int node)
+{
+    // if the parent node is not the parent of itself then it has been merged before with another subset find the above parent recursively
+    if (subset[node].parent != node)
+    {
+        subset[node].parent = find(subset, subset[node].parent);
+    }
+    return subset[node].parent;
+}
+
 //  union operation on the graph is to be performed when both the nodes belongs to diffrent subse
-void Union(vector<Subset> subset, int srcNode, int destNode)
+void Union(vector<Subset> &subset, int srcNode, int destNode)
 {
     //  get the parent of the source node
     int srcNP = find(subset, srcNode);
@@ -46,17 +57,6 @@ void Union(vector<Subset> subset, int srcNode, int destNode)
         // increment the rank of the source node by 1;
         subset[srcNP].rank++;
     }
-}
-
-//  function for finding the parent node of the given node
-int find(vector<Subset> subset, int node)
-{
-    // if the parent node is not the parent of itself then it has been merged before with another subset find the above parent recursively
-    if (subset[node].parent != node)
-    {
-        subset[node].parent = find(subset, subset[node].parent);
-    }
-    return subset[node].parent;
 }
 
 //  function for krushkal algo
@@ -96,11 +96,18 @@ void krushkalAlg0(int v, vector<Edge> graph)
             Union(subsets, srcNP, dstNP);
         }
     }
+
+    // for printing the edges that are been selected
+    for (size_t i = 0; i < result.size(); i++)
+    {
+        cout << result[i].source << "--" << result[i].dest << ":" << result[i].weight << endl;
+    }
 }
 
 int main()
 {
     vector<Edge> graph;
+    int V = 8;
 
     // adding the nodes and the edges of the graph
     graph.push_back({1, 2, 1});
@@ -112,6 +119,8 @@ int main()
     graph.push_back({6, 8, 8});
     graph.push_back({8, 7, 4});
     graph.push_back({7, 5, 9});
+
+    krushkalAlg0(V, graph);
 
     return 0;
 }
