@@ -11,6 +11,7 @@
         "queue": "cpp",
         "span": "cpp",
         "type_traits": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "string": "cpp"
     }
 }
