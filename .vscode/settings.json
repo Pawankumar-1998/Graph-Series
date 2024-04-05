@@ -12,6 +12,7 @@
         "span": "cpp",
         "type_traits": "cpp",
         "xstring": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "ostream": "cpp"
     }
 }
