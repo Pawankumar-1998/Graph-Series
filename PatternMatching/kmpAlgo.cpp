@@ -38,7 +38,7 @@ vector<int> pieTable(const string &pattern)
     return table;
 }
 
-// code for the kmp algorith
+// code for the kmp algorithm
 void kmpAlgo(const string &text, const string &pattern)
 {
     int m = pattern.length();
