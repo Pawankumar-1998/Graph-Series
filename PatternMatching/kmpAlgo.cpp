@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// code for the pie table
+// code for the pie tables
 vector<int> pieTable(const string &pattern)
 {
     int n = pattern.length();
