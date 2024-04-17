@@ -37,7 +37,7 @@ int main()
 
     cout << "The max profit that can be earned is " << v[n][m] << endl;
 
-    //  this is code to see which objects are included and which are ignored if 0 excluded if 1 included
+    //  this is code to see which objects are included and which are ignored if 0 excluded if 1 include
     int i = n, j = m;
     while (i > 0 && j > 0)
     {
