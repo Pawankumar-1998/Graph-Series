@@ -18,7 +18,7 @@ int main()
     {
         for (int j = 0; j <= m; j++)
         {
-            //  if the i and w are 0 which means if there is no object or if the weight of the back is 0 then the profit is 0
+            //  if the i and w are 0 which means if there is no object or if the weight of the back is 0 then the profit is 0 at all
             if (i == 0 || j == 0)
             {
                 v[i][j] = 0;
