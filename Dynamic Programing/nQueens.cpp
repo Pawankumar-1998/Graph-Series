@@ -14,7 +14,7 @@ bool isSafe(int row, int col, vector<int> &placement)
         placement[i] - i = col - row --> this for checking if the queen falls in the right diagonal
         placement[i] + i == col - row --> this is for checking if the queen falls in the left diagonal
 
-        if any of the abovbe statement are true then the position of the queen is not safe
+        if any of the abovbe statement are true then the position of the queen is not safes
         */
         if (placement[i] == col || placement[i] - i == col - row || placement[i] + i == col + row)
         {
