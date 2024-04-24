@@ -6,7 +6,7 @@ using namespace std;
 //  this code will return true if the queen is safe or not
 bool isSafe(int row, int col, vector<int> &placement)
 {
-    //  check the current position with the previous queen positions
+    //  check the current position with the previous queen position
     for (int i = 0; i < row; i++)
     {
         /*
