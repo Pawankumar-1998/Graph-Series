@@ -4,7 +4,7 @@
 
 using namespace std;
 
-//  code for the algo matrix multiplication
+//  code for the  matrix multiplication algo 
 vector<vector<int>> matrix_chain_multiplication(const vector<int> &dims)
 {
     int n = dims.size();
