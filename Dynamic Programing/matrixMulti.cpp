@@ -9,7 +9,7 @@ vector<vector<int>> matrix_chain_multiplication(const vector<int> &dims)
 {
     int n = dims.size();
 
-    //  storing the value of cost of multipliying two matrixs
+    //  storing the value of cost of multipliying two matrix
     vector<vector<int>> c(n, vector<int>(n, 0));
 
     // this is used for storing k
